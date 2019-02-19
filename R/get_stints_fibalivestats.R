@@ -313,10 +313,14 @@ for(i in 1:max(subs$sub_group)) {
   }
 
 }
-#add teams names
+stints.df = stints.df[, c(1:10, 45, 46, 47,48,49, 11:44,50)]
+
 stints.df$home_team = home_team_name
+
 stints.df$away_team = away_team_name
-stints.df = stints.df[,c(1:10, 45, 46, 11:44)]
 
 return(stints.df)
+
 }
+
+names(stints.df)  
