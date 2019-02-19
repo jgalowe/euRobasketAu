@@ -186,7 +186,7 @@ for(i in 1:length(unique(lineups_df$team))) {
                           team_ftm = sum(lineup_dat$team_ftm),
                           `team_ft%`,
                           `team_ts%`,
-                          `%fgm_ast`,
+                          `%fgm_as`,
                           team_ast = sum(lineup_dat$team_ast),
                           ast_rate,
                           team_tovs = sum(lineup_dat$team_tovs),
