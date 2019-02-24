@@ -222,8 +222,6 @@ for(i in 1:length(unique(lineups_df$team))) {
                         'Rim FG%',
                         'OPP SATR',
                         'OPP MATR',
-                        'Opp SATR',
-                        'Opp MATR',
                         '3PA',
                         '3PM',
                         '3P%',
