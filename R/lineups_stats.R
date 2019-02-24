@@ -219,11 +219,11 @@ for(i in 1:length(unique(lineups_df$team))) {
                         'FG%',
                         'Shots at the rim',
                         'Makes at the rim',
+                        'Rim FG%',
                         'OPP SATR',
                         'OPP MATR',
-                        'Rim FG%',
-                        'Opp SATR'
-                        'Opp MATR'
+                        'Opp SATR',
+                        'Opp MATR',
                         '3PA',
                         '3PM',
                         '3P%',
