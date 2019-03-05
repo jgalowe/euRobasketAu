@@ -25,7 +25,7 @@
 #'
 #'lineups_stats(cl_stints, min.possessions = 10)
 
-lineups_stats = function(stints.df, min.possessions = 1, ratings.only = FALSE) {
+opp_stats = function(stints.df, min.possessions = 1, ratings.only = FALSE) {
 
 #get home lineups sorted alphabetically
 home_lineups = sapply(1:nrow(stints.df), function(x)
