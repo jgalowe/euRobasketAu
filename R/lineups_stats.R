@@ -62,7 +62,7 @@ home_counting = data.frame(team = stints.df$home_team,
                            team_stls = stints.df$home_steals,
                            team_blks = stints.df$home_blocks,
                            team_tovs = stints.df$home_tovs,
-                           opp_fga = stints.df$away_2pt_fga+stints.df$away_3pt_fga)
+                           opp_fga = stints.df$away_2pt_fga + stints.df$away_3pt_fga)
 
 home_lineups = data.frame(cbind(home_lineups, home_counting, stringsAsFactors = FALSE))
 names(home_lineups)[1] = 'lineup'
@@ -103,7 +103,7 @@ away_counting = data.frame(team = stints.df$away_team,
                            team_stls = stints.df$away_steals,
                            team_blks = stints.df$away_blocks,
                            team_tovs = stints.df$away_tovs,
-                           opp_fga = stints.df$home_2pt_fga+stints.df$home_3pt_fga)
+                           opp_fga = stints.df$home_2pt_fga + stints.df$home_3pt_fga)
 
 away_lineups = data.frame(cbind(away_lineups, away_counting, stringsAsFactors = FALSE))
 names(away_lineups)[1] = 'lineup'
@@ -139,6 +139,8 @@ for(i in 1:length(unique(lineups_df$team))) {
 
     #calculate shooting stats
     team_fga = sum(lineup_dat$team_fga2) + sum(lineup_dat$team_fga3)
+    
+    opp_fga = sum(lineup_dat$opp_fga2) + sum(lineup_dat$opp_fga3)
     
    `team_fg%` = round(100*((sum(lineup_dat$team_fgm2) +  sum(lineup_dat$team_fgm3))/team_fga),2)
 
