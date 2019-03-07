@@ -61,7 +61,9 @@ home_counting = data.frame(team = stints.df$home_team,
                            team_blks = stints.df$home_blocks,
                            team_tovs = stints.df$home_tov,
                            opp_fga2 = stints.df$away_2pt_fga,
-                           opp_fga3 = stints.df$home_3pt_fga)
+                           opp_fga3 = stints.df$home_3pt_fga,
+                           opp_pts = stints.df$away_pts,
+                           opp_poss = stints.df$away_possesions)
 
 home_lineups = data.frame(cbind(home_lineups, home_counting, stringsAsFactors = FALSE))
 names(home_lineups)[1] = 'lineup'
@@ -101,7 +103,9 @@ away_counting = data.frame(team = stints.df$away_team,
                            team_blks = stints.df$away_blocks,
                            team_tovs = stints.df$away_tovs,
                            opp_fga2 = stints.df$home_2pt_fga,
-                           opp_fga3 = stints.df$home_3pt_fga)
+                           opp_fga3 = stints.df$home_3pt_fga,
+                           opp_pts = stints.df$home_pts,
+                           opp_poss = stints.df$home_possesions)
 
 away_lineups = data.frame(cbind(away_lineups, away_counting, stringsAsFactors = FALSE))
 names(away_lineups)[1] = 'lineup'
