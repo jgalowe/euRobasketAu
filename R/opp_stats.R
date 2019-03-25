@@ -133,9 +133,9 @@ for(i in 1:length(unique(lineups_df$team))) {
     lineup_dat = team_dat[which(team_dat$lineup == lineup),]
 
     #calculate ortg, drtg and netrtg
-    team_ortg = round(100*(sum(lineup_dat$team_pts)/sum(lineup_dat$team_poss)),2)
-    team_drtg = round(100*(sum(lineup_dat$opp_pts)/sum(lineup_dat$opp_poss)),2)
-    team_netrtg = team_ortg-team_drtg
+    team_ortg = round(100*(sum(lineup_dat$opp_pts)/sum(lineup_dat$opp_poss)),2)
+    team_drtg = round(100*(sum(lineup_dat$team_pts)/sum(lineup_dat$team_poss)),2)
+    team_netrtg = team_drtg-team_ortg
 
     #calculate shooting stats
     team_fga = sum(lineup_dat$team_fga2) + sum(lineup_dat$team_fga3)
