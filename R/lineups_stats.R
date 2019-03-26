@@ -183,8 +183,8 @@ for(i in 1:length(unique(lineups_df$team))) {
                           team_drtg,
                           team_netrtg,
                           team_fga,
-                          opp_pts,
-                          team_pts
+                          opp_pts = sum(lineup_dat$opp_pts),
+                          team_pts = sum(lineup_dat$team_pts),
                           `team_fg%`,
                           team_pfga = sum(lineup_dat$team_pfga),
                           team_pfgm = sum(lineup_dat$team_pfgm),
