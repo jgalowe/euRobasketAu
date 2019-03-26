@@ -181,6 +181,7 @@ for(i in 1:length(unique(lineups_df$team))) {
                           team_fga,
                           `team_fg%`,
                           opp_pts,
+                          team_pts,
                           team_pfga = sum(lineup_dat$team_pfga),
                           team_pfgm = sum(lineup_dat$team_pfgm),
                           `team_paint_fg%`,
@@ -216,7 +217,8 @@ for(i in 1:length(unique(lineups_df$team))) {
                         'NetRtg',
                         'FGA',
                         'FG%',
-                        'Opp Points'
+                        'Opp Points',
+                        'Points',
                         'Shots at the rim',
                         'Makes at the rim',
                         'Rim FG%',
