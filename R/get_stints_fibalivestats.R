@@ -197,7 +197,7 @@ get_stint_data = function(start_row, end_row) {
                           home_oFoul,
                           home_3sec,
                           home_8sec,
-                          home_24sec)
+                          home_24sec))
 
   #calculate home possesions
   home$home_possesions = ((home$home_2pt_fga+home$home_3pt_fga) + home$home_tovs + (0.44*home$home_fta) - home$home_orebs))
