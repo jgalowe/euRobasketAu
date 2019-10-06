@@ -111,7 +111,7 @@ away_counting = data.frame(team = stints.df$away_team,
                            opp_fga2 = stints.df$home_2pt_fga,
                            opp_fga3 = stints.df$home_3pt_fga,
                            opp_pts = stints.df$home_pts,
-                           opp_poss = stints.df$home_possesions
+                           opp_poss = stints.df$home_possesions,
                            team_ballhandling = stints.df$away_ballhandling,
                            team_badpass = stints.df$away_badpass,
                            team_oFoul = stints.df$away_oFoul,
