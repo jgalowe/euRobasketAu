@@ -346,5 +346,3 @@ stints.df$home_team = home_team_name
 stints.df$away_team = away_team_name
 return(stints.df)
 }
-
-                    
