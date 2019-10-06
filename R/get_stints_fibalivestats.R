@@ -164,12 +164,12 @@ get_stint_data = function(start_row, end_row) {
   home_pts = (home_2pt_fgm*2) + (home_3pt_fgm*3) + home_ftm
    
   #turnover types
-  home_ballhandling = nrow(home_actions[which(home_actions$subType ==  "ballhandling"|home_actions$subType == "doubledribble"|home_actions$subType == "travel"),])
-  home_badpass = nrow(home_actions[which(home_actions$subType ==  "badpass"),])
-  home_oFoul = nrow(home_actions[which(home_actions$subType ==  "offensive"),])
-  home_3sec = nrow(home_actions[which(home_actions$subType ==  "3sec"),])
-  home_8sec = nrow(home_actions[which(home_actions$subType ==  "8sec"),])
-  home_24sec = nrow(home_actions[which(home_actions$subType ==  "24sec"),])
+  home_ballhandling = home_actions[home_actions$subType ==  "ballhandling"|home_actions$subType == "doubledribble"|home_actions$subType == "travel",]
+  home_badpass = home_actions[home_actions$subType ==  "badpass",]
+  home_oFoul = home_actions[home_actions$subType ==  "offensive",]
+  home_3sec = home_actions[home_actions$subType ==  "3sec",]
+  home_8sec = home_actions[home_actions$subType ==  "8sec",]
+  home_24sec = home_actions[home_actions$subType ==  "24sec",]
    
   #create data.frame with actions
   home = data.frame(cbind(
@@ -251,12 +251,12 @@ get_stint_data = function(start_row, end_row) {
   away_pts = (away_2pt_fgm*2) + (away_3pt_fgm*3) + away_ftm
    
   #turnover types
-  away_ballhandling = nrow(away_actions[which(away_actions$subType ==  "ballhandling"|away_actions$subType == "doubledribble"|away_actions$subType == "travel"),])
-  away_badpass = nrow(away_actions[which(away_actions$subType ==  "badpass"),])
-  away_oFoul = nrow(away_actions[which(away_actions$subType ==  "offensive"),]) 
-  away_3sec = nrow(away_actions[which(away_actions$subType ==  "3sec"),])
-  away_8sec = nrow(away_actions[which(away_actions$subType ==  "8sec"),])
-  away_24sec = nrow(away_actions[which(away_actions$subType ==  "24sec"),])
+  away_ballhandling = away_actions[away_actions$subType ==  "ballhandling"|away_actions$subType == "doubledribble"|away_actions$subType == "travel",]
+  away_badpass = away_actions[away_actions$subType ==  "badpass",]
+  away_oFoul = away_actions[away_actions$subType ==  "offensive",]
+  away_3sec = away_actions[away_actions$subType ==  "3sec",]
+  away_8sec = away_actions[away_actions$subType ==  "8sec",]
+  away_24sec = away_actions[away_actions$subType ==  "24sec",]
 
   #create data.frame with actions
   away = data.frame(cbind(
