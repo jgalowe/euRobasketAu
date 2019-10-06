@@ -200,7 +200,7 @@ get_stint_data = function(start_row, end_row) {
                           home_24sec)
 
   #calculate home possesions
-  home$home_possesions = ((home$home_2pt_fga+home$home_3pt_fga) + home$home_tovs + (0.44*home$home_fta) - home$home_orebs)
+  home$home_possesions = ((home$home_2pt_fga+home$home_3pt_fga) + home$home_tovs + (0.44*home$home_fta) - home$home_orebs))
   home$home_possesions[home$home_possesions < 0] = 0
 
   #calculate actions types for away team
