@@ -191,13 +191,13 @@ get_stint_data = function(start_row, end_row) {
                           home_assists,
                           home_tovs,
                           home_steals,
-                          home_blocks
-                          home_ballhandling
-                          home_badpass
-                          home_oFoul
-                          home_3sec
-                          home_8sec
-                          home_24sec))
+                          home_blocks,
+                          home_ballhandling,
+                          home_badpass,
+                          home_oFoul,
+                          home_3sec,
+                          home_8sec,
+                          home_24sec)
 
   #calculate home possesions
   home$home_possesions = ((home$home_2pt_fga+home$home_3pt_fga) + home$home_tovs + (0.44*home$home_fta) - home$home_orebs)
@@ -278,13 +278,13 @@ get_stint_data = function(start_row, end_row) {
                           away_assists,
                           away_tovs,
                           away_steals,
-                          away_blocks
-                          home_ballhandling
-                          home_badpass
-                          home_oFoul
-                          home_3sec
-                          home_8sec
-                          home_24sec))
+                          away_blocks,
+                          away_ballhandling,
+                          away_badpass,
+                          away_oFoul,
+                          away_3sec,
+                          away_8sec,
+                          away_24sec)
 
   #calculate away possesions
   away$away_possesions = ((away$away_2pt_fga+away$away_3pt_fga) + away$away_tovs + (0.44*away$away_fta) - away$away_orebs)
