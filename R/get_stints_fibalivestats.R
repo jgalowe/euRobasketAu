@@ -166,7 +166,7 @@ get_stint_data = function(start_row, end_row) {
   #turnover types
   home_ballhandling = nrow(home_actions[which(home_actions$subType ==  "ballhandling"|home_actions$subType == "doubledribble"|home_actions$subType == "travel"),])
   home_badpass = nrow(home_actions[which(home_actions$subType ==  "badpass"),])
-  home_oFoul = nrow(home_actions[which(home_actions$subType ==  "offensive"),] )
+  home_oFoul = nrow(home_actions[which(home_actions$subType ==  "offensive"),])
   home_3sec = nrow(home_actions[which(home_actions$subType ==  "3sec"),])
   home_8sec = nrow(home_actions[which(home_actions$subType ==  "8sec"),])
   home_24sec = nrow(home_actions[which(home_actions$subType ==  "24sec"),])
