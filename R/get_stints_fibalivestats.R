@@ -165,7 +165,6 @@ get_stint_data = function(start_row, end_row) {
    
   #turnover types
   home_ballhandling = home_actions[home_actions$subType ==  "ballhandling"|home_actions$subType == "doubledribble"|home_actions$subType == "travel",]
- home_patr = home_actions[home_actions$subType ==  "layup"|home_actions$subType == "dunk",]
   home_badpass = home_actions[home_actions$subType ==  "badpass",]
   home_oFoul = home_actions[home_actions$subType ==  "offensive",] 
   home_3sec = home_actions[home_actions$subType ==  "3sec",]
