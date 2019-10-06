@@ -200,7 +200,7 @@ get_stint_data = function(start_row, end_row) {
                           home_24sec))
 
   #calculate home possesions
-  home$home_possesions = ((home$home_2pt_fga+home$home_3pt_fga) + home$home_tovs + (0.44*home$home_fta) - home$home_orebs))
+  home$home_possesions = ((home$home_2pt_fga+home$home_3pt_fga) + home$home_tovs + (0.44*home$home_fta) - home$home_orebs)
   home$home_possesions[home$home_possesions < 0] = 0
 
   #calculate actions types for away team
@@ -284,7 +284,7 @@ get_stint_data = function(start_row, end_row) {
                           away_oFoul,
                           away_3sec,
                           away_8sec,
-                          away_24sec)
+                          away_24sec))
 
   #calculate away possesions
   away$away_possesions = ((away$away_2pt_fga+away$away_3pt_fga) + away$away_tovs + (0.44*away$away_fta) - away$away_orebs)
