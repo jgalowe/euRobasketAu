@@ -31,17 +31,17 @@
 #'
 
 get_stints_fibalivestats = function(gameid) {
-  
-  #Load play by play
-  pbp = get_raw_pbp_fibalivestats(1360302)
-  
-  #Load starting lineups
-  url_s5 = paste('http://www.fibalivestats.com/data/1360302/data.json')
-  starting_5s = fromJSON(url_s5)
-  
-  #get teams names
-  home_team_name = starting_5s$tm$`1`$name
-  away_team_name = starting_5s$tm$`2`$name
+
+#Load play by play
+pbp = get_raw_pbp_fibalivestats(gameid)
+
+#Load starting lineups
+url_s5 = paste('http://www.fibalivestats.com/data/',gameid,'/data.json', sep = '')
+starting_5s = fromJSON(url_s5)
+
+#get teams names
+home_team_name = starting_5s$tm$`1`$name
+away_team_name = starting_5s$tm$`2`$name
   
   #home starters
   home_s5 = c()
