@@ -288,17 +288,17 @@ get_stints_fibalivestats = function(gameid) {
       away_8sec,
       away_24sec))
     
-    #calculate away possesions
-    away$away_possesions = 0.96*((away$away_2pt_fga+away$away_3pt_fga) + away$away_tovs + (0.44*away$away_fta) - away$away_orebs)
-    away$away_possesions[away$away_possesions < 0] = 0
-    #combine home and away
-    stint_data = cbind(home, away)
-    
-    #NaNs to 0
-    stint_data[stint_data == 'NaN'] = 0
-    
-    return(stint_data)
-  }
+  #calculate away possesions
+  away$away_possesions = 0.96*((away$away_2pt_fga+away$away_3pt_fga) + away$away_tovs + (0.44*away$away_fta) - away$away_orebs)
+  away$away_possesions[away$away_possesions < 0] = 0
+  #combine home and away
+  stint_data = cbind(home, away)
+
+  #NaNs to 0
+  stint_data[stint_data == 'NaN'] = 0
+
+  return(stint_data)
+}
   
   #create stints data.frame
   #first row
