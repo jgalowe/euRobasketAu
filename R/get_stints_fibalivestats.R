@@ -31,17 +31,17 @@
 #'
 
 get_stints_fibalivestats = function(gameid) {
-
-#Load play by play
-pbp = get_raw_pbp_fibalivestats(gameid)
-
-#Load starting lineups
-url_s5 = paste('http://www.fibalivestats.com/data/',gameid,'/data.json', sep = '')
-starting_5s = fromJSON(url_s5)
-
-#get teams names
-home_team_name = starting_5s$tm$`1`$name
-away_team_name = starting_5s$tm$`2`$name
+  
+  #Load play by play
+  pbp = get_raw_pbp_fibalivestats(gameid)
+  
+  #Load starting lineups
+  url_s5 = paste('http://www.fibalivestats.com/data/',gameid,'/data.json', sep = '')
+  starting_5s = fromJSON(url_s5)
+  
+  #get teams names
+  home_team_name = starting_5s$tm$`1`$name
+  away_team_name = starting_5s$tm$`2`$name
   
   #home starters
   home_s5 = c()
@@ -163,21 +163,14 @@ away_team_name = starting_5s$tm$`2`$name
     #pts scored home
     home_pts = (home_2pt_fgm*2) + (home_3pt_fgm*3) + home_ftm
     
-    # #turnover types
-    # home_ballhandling = home_actions[home_actions$subType ==  "ballhandling"|home_actions$subType == "doubledribble"|home_actions$subType == "travel",]
-    # home_badpass = home_actions[home_actions$subType ==  "badpass",]
-    # home_oFoul = home_actions[home_actions$subType ==  "offensive",]
-    # home_3sec = home_actions[home_actions$subType ==  "3sec",]
-    # home_8sec = home_actions[home_actions$subType ==  "8sec",]
-    # home_24sec = home_actions[home_actions$subType ==  "24sec",]
-    
-    # #turnover types
-    home_ballhandling = nrow(pbp[pbp$subType ==  "ballhandling" & pbp$tno == 1 | pbp$subType == "doubledribble" & pbp$tno == 1 | pbp$subType == "travel" & pbp$tno == 1 ,])
-    home_badpass = nrow(pbp[pbp$subType ==  "badpass" & pbp$tno == 1,])
-    home_oFoul = nrow(pbp[pbp$actionType == "turnover" & pbp$subType ==  "offensive" & pbp$tno == 1,])
-    home_3sec = nrow(pbp[pbp$subType ==  "3sec" & pbp$tno == 1,])
-    home_8sec = nrow(pbp[pbp$subType ==  "8sec" & pbp$tno == 1,])
-    home_24sec = nrow(pbp[pbp$subType ==  "24sec" & pbp$tno == 1,])
+    #turnover types
+     home_ballhandling = nrow(home_actions[home_actions$subType ==  "ballhandling"|home_actions$subType == "doubledribble"|home_actions$subType == "travel",])
+     home_badpass = nrow( home_actions[home_actions$subType ==  "badpass",])
+     home_oFoul = nrow(home_actions[home_actions$subType ==  "offensive",])
+     home_3sec =nrow( home_actions[home_actions$subType ==  "3sec",])
+     home_8sec = nrow(home_actions[home_actions$subType ==  "8sec",])
+     home_24sec = nrow(home_actions[home_actions$subType ==  "24sec",])
+
                   
 
     #create data.frame with actions
@@ -259,13 +252,13 @@ away_team_name = starting_5s$tm$`2`$name
     #pts scored away
     away_pts = (away_2pt_fgm*2) + (away_3pt_fgm*3) + away_ftm
     
-    # #turnover types
-    away_ballhandling = nrow(pbp[pbp$subType ==  "ballhandling" & pbp$tno == 2 | pbp$subType == "doubledribble" & pbp$tno == 2 | pbp$subType == "travel" & pbp$tno == 2 ,])
-    away_badpass = nrow(pbp[pbp$subType ==  "badpass" & pbp$tno == 2,])
-    away_oFoul = nrow(pbp[pbp$subType ==  "offensive" & pbp$tno == 2,])
-    away_3sec = nrow(pbp[pbp$subType ==  "3sec" & pbp$tno == 2,])
-    away_8sec = nrow(pbp[pbp$subType ==  "8sec" & pbp$tno == 2,])
-    away_24sec = nrow(pbp[pbp$subType ==  "24sec" & pbp$tno == 2,])
+    #turnover types
+    away_ballhandling = nrow(away_actions[away_actions$subType ==  "ballhandling"|away_actions$subType == "doubledribble"|away_actions$subType == "travel",])
+    away_badpass = nrow( away_actions[away_actions$subType ==  "badpass",])
+    away_oFoul = nrow(away_actions[away_actions$subType ==  "offensive",])
+    away_3sec =nrow( away_actions[away_actions$subType ==  "3sec",])
+    away_8sec = nrow(away_actions[away_actions$subType ==  "8sec",])
+    away_24sec = nrow(away_actions[away_actions$subType ==  "24sec",])
     
     #create data.frame with actions
     away = data.frame(cbind(
@@ -350,9 +343,8 @@ away_team_name = starting_5s$tm$`2`$name
     }
     
   }
-  stints.df = stints.df[, c(1:10, 45, 46, 47,48,49, 11:44,50)]
+  stints.df= stints.df[, c(1:10, 45, 46, 47,48,49, 11:44,50:56)]
   stints.df$home_team = home_team_name
   stints.df$away_team = away_team_name
   return(stints.df)
 }
-
