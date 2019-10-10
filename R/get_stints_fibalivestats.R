@@ -343,7 +343,7 @@ get_stints_fibalivestats = function(gameid) {
     }
     
   }
-  stints.df= stints.df[, c(1:10, 45, 46, 47,48,49, 11:44,50:56)]
+  stints.df= stints.df[, c(1:10, 45, 46, 47,48,49, 11:44,50:62)]
   stints.df$home_team = home_team_name
   stints.df$away_team = away_team_name
   return(stints.df)
