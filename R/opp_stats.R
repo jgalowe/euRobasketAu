@@ -267,7 +267,7 @@ for(i in 1:length(unique(lineups_df$team))) {
                         'TO - Offensive Foul',
                         'TO - 3 Sec',
                         'TO - 8 Sec',
-                        'TO - 24 Sec'))
+                        'TO - 24 Sec')
 
   team_lineup_dat = rbind(team_lineup_dat, stats_df)
   }
