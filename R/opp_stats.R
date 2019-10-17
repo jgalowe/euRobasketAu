@@ -164,7 +164,7 @@ for(i in 1:length(unique(lineups_df$team))) {
     
     opp_fga = sum(lineup_dat$opp_fga2) + sum(lineup_dat$opp_fga3)
     
-    opp_fgm = = sum(lineup_dat$opp_fgm2) + sum(lineup_dat$opp_fgm3)
+    opp_fgm = sum(lineup_dat$opp_fgm2) + sum(lineup_dat$opp_fgm3)
     
    `team_fg%` = round(100*((sum(lineup_dat$team_fgm2) +  sum(lineup_dat$team_fgm3))/team_fga),2)
 
