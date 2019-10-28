@@ -320,9 +320,9 @@ get_stints_fibalivestats = function(gameid) {
       
       sub = subs_to_make[j,]
       if(sub$team == 1) {
-        players_on_court[1:5][grep(sub$player_out, players_on_court[1:5],ignore.case = TRUE)] = sub$player_in
+        players_on_court[1:5][grep(sub$player_out, players_on_court[1:5])] = sub$player_in
       } else if(sub$team == 2) {
-        players_on_court[6:10][grep(sub$player_out, players_on_court[6:10],ignore.case = TRUE)] = sub$player_in
+        players_on_court[6:10][grep(sub$player_out, players_on_court[6:10])] = sub$player_in
       }
     }
     
