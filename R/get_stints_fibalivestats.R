@@ -129,7 +129,7 @@ get_stints_fibalivestats = function(gameid) {
     `home_2pt_fg%` = round((home_2pt_fgm/home_2pt_fga),2)
     
     #points at the rim
-    home_patr = home_actions[home_actions$subType ==  "layup"|home_actions$subType == "dunk",]
+    home_patr = home_actions[home_actions$subType ==  "layup"|home_actions$subType ==  "drivinglayup"|home_actions$subType == "dunk",]
     home_patr_a = nrow(home_patr)
     home_patr_m = nrow(home_patr[which(home_patr$success == 1),])
     `home_patr_fg%`= round((home_patr_m/home_patr_m),2)
@@ -218,7 +218,7 @@ get_stints_fibalivestats = function(gameid) {
     `away_2pt_fg%` = round((away_2pt_fgm/away_2pt_fga),2)
     
     #points at the rim
-    away_patr = away_actions[away_actions$subType ==  "layup"|away_actions$subType == "dunk",]
+    away_patr = away_actions[away_actions$subType ==  "layup"|away_actions$subType ==  "drivinglayup"|away_actions$subType == "dunk",]
     away_patr_a = nrow(away_patr)
     away_patr_m = nrow(away_patr[which(away_patr$success == 1),])
     `away_patr_fg%`= round((away_patr_m/away_patr_m),2)
