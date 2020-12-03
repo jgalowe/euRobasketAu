@@ -22,7 +22,7 @@ get_raw_pbp_fibalivestats = function(gameid) {
   #extract play by play from json
 
   pbp = dat$pbp
-  pbp = pbp[,1:15]
+  pbp = pbp[,1:17]
 
   #change period id of OT
 
